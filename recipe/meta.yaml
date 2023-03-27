@@ -1,17 +1,17 @@
 {% set name = "tensorboard-data-server" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/74/69/5747a957f95e2e1d252ca41476ae40ce79d70d38151d2e494feb7722860c/tensorboard_data_server-0.6.1-py3-none-any.whl
-  sha256: 809fe9887682d35c1f7d1f54f0f40f98bb1f771b14265b453ca051e2ce58fca7
+  url: https://files.pythonhosted.org/packages/9d/cc/6f07c0043b44b3c3879ecfec1b8a450b6f5e3f8dccfedc9f5f1bc2c650e6/tensorboard_data_server-{{ version }}-py3-none-any.whl
+  sha256: 753d4214799b31da7b6d93837959abebbc6afa86e69eacf1e9a317a48daa31eb
 
 build:
   script: "python -m pip install tensorboard_data_server-{{ version }}*.whl --no-deps --ignore-installed -vv "
-  number: 3
+  number: 1
   noarch: python
 
 requirements:
